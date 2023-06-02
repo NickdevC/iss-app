@@ -21,6 +21,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x64-mingw-ucrt
 
 DEPENDENCIES
   faraday
