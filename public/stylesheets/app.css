@@ -5,3 +5,12 @@
 .Home-link {
     text-align: center;
 }
+
+table {
+    border-collapse
+}
+
+th, td {
+    border: 1px solid blue;
+    padding: 10px;
+}

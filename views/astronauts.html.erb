@@ -1,7 +1,26 @@
-<h1>Who is on the ISS? 🛰️</h1>
+<h1 class="Heading">Who is on the ISS? 🛰️</h1>
 <div class="Container">
+    <table>
+        <tr>
+            <th>Craft</th>
+            <th>Astronaut</th>
+        </tr>
+        <tr>
+            <td><%= data['people'][0]['craft'] %></td>
+            <td><%= data['people'][0]['name'] %></td>
+        </tr>
+        <tr>
+            <td><%= data['people'][1]['craft'] %></td>
+            <td><%= data['people'][1]['name'] %></td>
+        </tr>
+        <tr>
+            <td><%= data['people'][2]['craft'] %></td>
+            <td><%= data['people'][2]['name'] %></td>
+        </tr>
+    </table>
+    
     <p>
-        Placeholder
+        <%= data['people'][0]['craft'] %>
     </p>
 </div>
 
