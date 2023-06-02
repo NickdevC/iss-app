@@ -1,4 +1,13 @@
 <h1>Where is the ISS? 🛰️</h1>
+<div>
+    <p>
+        ISS Longtitude: <span><%= data['iss_position']['longitude'] %></span>
+    </p>
+    <p>
+        ISS Latitude: <span><%= data['iss_position']['longitude'] %></span>
+    </p>
+</div>
 
-
-<p>This observation was made at <%= Time.at(data['timestamp']) %>.</p>
+<div>
+    <p>This observation was made at <%= Time.at(data['timestamp']) %>.</p>
+</div>
