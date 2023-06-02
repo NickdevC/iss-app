@@ -21,7 +21,7 @@ end
 
 get '/astronauts' do
   astros = OpenNotify.astros
-
+  
   erb :astronauts, locals: { data: astros }
 end
 

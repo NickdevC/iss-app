@@ -17,8 +17,13 @@ module OpenNotify
     fetch_data(api: 'iss-now')
   end
 
-  def astros
+ def astros
     fetch_data(api: 'astros')
+ end
+
+  # Attempt to define a new method for calling astronauts data and store as a variable
+  def astros_data
+    astros['people']
   end
 
   def fetch_data(api:)
