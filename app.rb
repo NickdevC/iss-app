@@ -3,6 +3,7 @@
 # myapp.rb
 require 'sinatra'
 require_relative 'open_notify'
+require 'json'
 
 # Allow our templates in views/ to end in `.html.erb`
 Tilt.register Tilt::ERBTemplate, 'html.erb'
@@ -25,6 +26,7 @@ get '/astronauts' do
   erb :astronauts, locals: { data: astros }
 end
 
-get '/iss_position.json' do
-  json({"iss_position": {"longitude": "-3.4941", "latitude": "-37.5113"}, "timestamp": 1684502291, "message": "success"})
+get '/iss_position' do
+  content_type :json
+  {"iss_position": {"longitude": "-3.4941", "latitude": "-37.5113"}, "timestamp": 1684502291, "message": "success"}.to_json
 end
