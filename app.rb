@@ -24,3 +24,9 @@ get '/astronauts' do
 
   erb :astronauts, locals: { data: astros }
 end
+
+get '/iss_position.json' do
+  fetch_data = OpenNotify.fetch_data(api:)
+
+  erb :locals: { data: fetch_data}
+end
