@@ -2,7 +2,16 @@
     text-align: center;
 }
 
+.Container {
+    display: flex;
+    justify-content: center;
+}
+
 .Home-link {
+    text-align: center;
+}
+
+.Timestamp {
     text-align: center;
 }
 
