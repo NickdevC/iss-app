@@ -1,3 +1,69 @@
+# My Development Notes
+
+## Important code & attempted functionality
+
+### 1. Retrieving data from iss_now.json
+
+First attempt at retrieving the data from local storage and rendering as html:
+```
+<p> Data: <%= OpenNotify.iss_now %></p>
+```
+ 
+Result: Displayed data purely as json within the html. Need to target specific objects/values.
+
+Fix:
+```
+<p class="Data">Longitude: <%= data['iss_position']['longitude'] %></p>
+<p class="Data">Latitude: <%= data['iss_position']['latitude'] %></p>
+```
+
+
+### 2. layout info
+
+```
+<link rel="stylesheet" type"text/css" href="/stylesheets/app.css" />
+```
+
+
+### 3. Astros.json data
+
+Issue: Having to write out each individual object in my html table which is not ideal. Need to iterate through the astros.json data and display each value pair in table using a new method/function.
+
+Attempted solution:
+
+```
+def astros_data
+    astros['people']
+end
+```
+
+```
+def astros
+   @astronauts = astros_data
+end
+```
+
+```
+<table>
+    <tr>
+       <th>Craft</th>
+       <th>Astronaut</th>
+    </tr>
+    <% @astronauts.each do |astronaut| %>
+    <tr>
+        <td><%= astronaut['craft'] %></td>
+        <td><%= astronaut['name'] %></td>
+    </tr>
+    <% end %>
+ </table>
+ ```
+
+## Sources:
+- Stackowverflow
+- ruby.doc.org
+
+---
+
 # RPF apprentice software engineer challenge
 
 This is a little application, written in [Ruby](https://ruby-lang.org), using the [Sinatra](https://sinatrarb.com/) framework.  It allows users to see the whereabouts of the International Space Station, using the [OpenNotify APIs](http://api.open-notify.org/).
