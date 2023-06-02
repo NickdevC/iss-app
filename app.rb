@@ -26,7 +26,5 @@ get '/astronauts' do
 end
 
 get '/iss_position.json' do
-  fetch_data = OpenNotify.fetch_data(api:)
-
-  erb :position, locals: { data: fetch_data}
+  json({"iss_position": {"longitude": "-3.4941", "latitude": "-37.5113"}, "timestamp": 1684502291, "message": "success"})
 end
