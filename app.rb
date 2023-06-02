@@ -28,5 +28,5 @@ end
 get '/iss_position.json' do
   fetch_data = OpenNotify.fetch_data(api:)
 
-  erb :locals: { data: fetch_data}
+  erb :position, locals: { data: fetch_data}
 end
