@@ -1,6 +1,8 @@
-# My Development Notes
+# My ISS Project
 
-## Important code & attempted functionality
+Initially I spent time reading through the file structures and trying to understand the functionality of all the code already present. Ruby and Sinatra are both completely new to me, so this took some time and on-going research as I continued to build the app. I tried to apply the same logic I have recently used in a React application, alongside trial and error to get some of the desired results. Ultimately, I have displayed most of the features required by the brief, but I know that there are ways to make the code cleaner and more succinct - I'm keen to find out what these methods are using Ruby specific syntax! 
+
+## Development Notes
 
 ### 1. Retrieving data from iss_now.json
 
@@ -57,6 +59,10 @@ end
     <% end %>
  </table>
  ```
+
+## Issues
+- If I had more time I would have completed more research into how to iterate through an array and display the data in a table on my astronauts.html.erb page.
+- I would ensure that the link to json data was exactly as the brief stated: '/iss_position.json'. As it stands, and in the timeframe, I was only able to get it to display in a html link. 
 
 ## Sources:
 - Stackowverflow
